@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:quiz_app/Data/Questions.dart';
@@ -14,9 +16,17 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
-  final currentQuestion = questions[0];
+  var currentQuestionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      currentQuestionIndex++;
+    });
+  }
+
   @override
   Widget build(context) {
+    final currentQuestion = questions[currentQuestionIndex];
     return Center(
         child: Column(
       mainAxisSize: MainAxisSize.min,
@@ -24,15 +34,16 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         Text(
           currentQuestion.text,
           style: TextStyle(color: Colors.amber, fontSize: 24),
+          textAlign: TextAlign.center,
         ),
         SizedBox(
           height: 30,
         ),
-        ...currentQuestion.answers.map(
+        ...currentQuestion.Getshuffleanswers().map(
           (answer) {
             return AnswerButton(
               answerText: answer,
-              onTap: () {},
+              onTap: answerQuestion,
             );
           },
         ),
