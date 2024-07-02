@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:quiz_app/Data/Questions.dart';
 
 class AnswerButton extends StatelessWidget {
   const AnswerButton({
@@ -10,17 +8,27 @@ class AnswerButton extends StatelessWidget {
   });
 
   final String answerText;
-  final Function() onTap;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 40,
+        ),
+        backgroundColor: const Color.fromARGB(255, 33, 1, 95),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.amber,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+        ),
       ),
-      child: Text(answerText),
+      child: Text(
+        answerText,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
