@@ -1,16 +1,19 @@
-# quiz_app
+# Quiz App
 
-A new Flutter project.
+A Flutter-based quiz application that provides an engaging platform to test your knowledge across various topics.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- User-friendly interface
+- Multiple categories of quizzes
+- Instant feedback on answers
+- Score tracking
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To get a local copy up and running, follow these simple steps:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/Priya-1305/Quiz_App
